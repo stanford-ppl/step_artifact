@@ -1,0 +1,15 @@
+.vscode/
+*.pyc
+*.npy
+*.pb
+*_pb2.py
+*.json
+*.png
+*.svg
+target/
+.github/
+.pytest_cache/
+*.txt
+*.csv
+*.zip
+*.pdf
