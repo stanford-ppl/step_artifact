@@ -28,7 +28,7 @@ ENV PATH="/root/.cargo/bin:${PATH}"
 RUN rustup toolchain install 1.83.0
 
 COPY step_artifact  /root/step_artifact
-COPY step-artifact-eval /root/step-artifact-eval
+COPY step-artifact-hdl /root/step-artifact-hdl
 WORKDIR /root/step_artifact
 
 RUN python3 -m venv venv

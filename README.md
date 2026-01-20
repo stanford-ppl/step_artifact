@@ -14,11 +14,11 @@ This is a repository for STeP artifact generation.
 
 This guide assumes the user has a working installation of Docker, git, and some version of Python 3 installed.
 
-* Run the following commands to clone this repository and the [step-artifact-eval](https://github.com/anonymous7484/step-artifact-eval) repository to the local machine.
+* Run the following commands to clone this repository and the [step-artifact-hdl](https://github.com/gina7484/step-artifact-hdl) repository to the local machine.
 
     ```bash
-    git clone --recursive https://github.com/anonymous7484/step_artifact.git
-    git clone https://github.com/anonymous7484/step-artifact-eval.git
+    git clone --recursive https://github.com/gina7484/step_artifact.git
+    git clone https://github.com/gina7484/step-artifact-hdl.git
     ```
 
 * Build the Docker image with the following commands (the build can take upto 5 minutes)
@@ -58,8 +58,8 @@ $ cd /root/step_artifact
 # Figure 9,10,12,13,14,15,21 and half of Figure 8 (23 hr)
 $ source ae_cmd.sh
 # Figure 8 (1hr 30mins)
-$ cp /root/step_artifact/hdl_validation/fig8.csv /root/step-artifact-eval/step_reference.csv
-$ cd /root/step-artifact-eval
+$ cp /root/step_artifact/hdl_validation/fig8.csv /root/step-artifact-hdl/step_reference.csv
+$ cd /root/step-artifact-hdl
 $ ./run_dse_and_figure.sh
 ```
 
@@ -84,14 +84,14 @@ Once all the experiments complete, detach the container by pressing `CTRL+p` and
 
     ```
     step_artifact/<OUTPUT_DIRECTORY>
-    |_ step-artifact-eval
+    |_ step-artifact-hdl
     |_step_artifact
         |_dyn_tiling
         |_dynamic_par
         |_timeshare_mem_bound
     ```
 
-    * Figure 8: The reproduced figure and experiment results can be found in the `step-artifact-eval` folder. The `validation.pdf` should match Figure 8 in the paper. The values used to create the plot are in the other two CSV files in the `step-artifact-eval` folder.
+    * Figure 8: The reproduced figure and experiment results can be found in the `step-artifact-hdl` folder. The `validation.pdf` should match Figure 8 in the paper. The values used to create the plot are in the other two CSV files in the `step-artifact-hdl` folder.
 
     * Figure 9: The reproduced figure and experiment results can be found in the `dyn_tiling` folder. The file `figure9.pdf` should match Figure 9 in the paper. The values used for creating the plot can be found in`figure_9_mixtral_b64_raw.csv` and `figure_9_qwen_b64_raw.csv`.
 
@@ -124,9 +124,9 @@ Once all the experiments complete, detach the container by pressing `CTRL+p` and
 
         ```bash
         # Copy the simulation resuls for the STeP simulator (fig8.csv) to the designated location to generate the graph
-        $ cp /root/step_artifact/hdl_validation/fig8.csv /root/step-artifact-eval/step_reference.csv
+        $ cp /root/step_artifact/hdl_validation/fig8.csv /root/step-artifact-hdl/step_reference.csv
         # Run the HDL simulation and generate the figure
-        $ cd /root/step-artifact-eval
+        $ cd /root/step-artifact-hdl
         $ ./run_dse_and_figure.sh
         ```
 
@@ -144,9 +144,9 @@ Once all the experiments complete, detach the container by pressing `CTRL+p` and
 
         ```python
         FILES_TO_COPY = [
-            "step-artifact-eval/dse_results.csv",
-            "step-artifact-eval/step_reference.csv",
-            "step-artifact-eval/validation.pdf",
+            "step-artifact-hdl/dse_results.csv",
+            "step-artifact-hdl/step_reference.csv",
+            "step-artifact-hdl/validation.pdf",
         ]
         ```
 
@@ -158,11 +158,11 @@ Once all the experiments complete, detach the container by pressing `CTRL+p` and
         $ python copy_from_docker.py --docker_id <CONTAINER_ID> --output_dir <OUTPUT_DIRECTORY>
         ```
 
-    4. The reproduced figure and experiment results can be found in the `step-artifact-eval` folder. The `validation.pdf` should match Figure 8 in the paper. The values used to create the plot are in the other two CSV files in the `step-artifact-eval` folder.
+    4. The reproduced figure and experiment results can be found in the `step-artifact-hdl` folder. The `validation.pdf` should match Figure 8 in the paper. The values used to create the plot are in the other two CSV files in the `step-artifact-hdl` folder.
 
         ```
         step_artifact/<OUTPUT_DIRECTORY>
-        |_ step-artifact-eval
+        |_ step-artifact-hdl
             |_ dse_results.csv
             |_ step_reference.csv
             |_ validation.pdf
