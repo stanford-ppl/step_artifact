@@ -62,7 +62,7 @@ def test_qwen_b1024(i_id_arg=22, l_id_arg=16):
     # l_id =2 
     i_id = i_id_arg
     l_id = l_id_arg   
-    # https://github.com/gina7484/expert_routing_data/blob/main/processed_qwen3-30B-A3B_3060_5764/per_iter_per_layer/bincount_analysis.csv
+    # https://github.com/stanford-ppl/expert_routing_data/blob/main/processed_qwen3-30B-A3B_3060_5764/per_iter_per_layer/bincount_analysis.csv
     # i_2_l_2: High (stdev: 241, bincount max: 1024, num non-selected experts: 106)
     # i_22_l_16: Med (stdev:131, bincount max: 814, num non-selected experts: 45)
     # i_22_l_0: Low (stdev:70, bincount max: 324, num non-selected experts: 19)

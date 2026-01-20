@@ -14,11 +14,11 @@ This is a repository for STeP artifact generation.
 
 This guide assumes the user has a working installation of Docker, git, and some version of Python 3 installed.
 
-* Run the following commands to clone this repository and the [step-artifact-hdl](https://github.com/gina7484/step-artifact-hdl) repository to the local machine.
+* Run the following commands to clone this repository and the [step-artifact-hdl](https://github.com/stanford-ppl/step-artifact-hdl) repository to the local machine.
 
     ```bash
-    git clone --recursive https://github.com/gina7484/step_artifact.git
-    git clone https://github.com/gina7484/step-artifact-hdl.git
+    git clone --recursive https://github.com/stanford-ppl/step_artifact.git
+    git clone https://github.com/stanford-ppl/step-artifact-hdl.git
     ```
 
 * Build the Docker image with the following commands (the build can take upto 5 minutes)
